@@ -11,12 +11,19 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
 import {DashboardService} from '../../modules/dashboard.service';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {ServiceComponent} from '../../modules/service/service.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {ServiceModule} from '../../modules/service/service.module';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
     DefaultComponent,
     DashboardComponent,
-    PostsComponent
+    PostsComponent,
+    ServiceComponent,
   ],
   imports: [
     CommonModule,
@@ -26,7 +33,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatDividerModule,
     FlexLayoutModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule,
+    MatSelectModule,
+    MatSnackBarModule
+
 
   ],
   providers: [
