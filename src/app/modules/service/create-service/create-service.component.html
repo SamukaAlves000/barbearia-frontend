@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-title>New Service</mat-card-title>
+  <form>
+
+    <mat-form-field>
+      <input matInput placeholder="Descrição" name="descricao">
+    </mat-form-field>
+    <small  class="form-text text-muted">Examples: Simple cut, Degradê cut, Beard ...</small>
+
+    <mat-form-field>
+      <input matInput placeholder="Preço (R$)"  name="price" type="number" class="example-right-align">
+    </mat-form-field>
+    <small  class="form-text text-muted">Examples: 10.00, 15.00, 20.00 ...</small>
+
+    <br>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Duração/Minutos</mat-label>
+      <mat-select>
+        <mat-option value="option">15</mat-option>
+        <mat-option value="option">30</mat-option>
+        <mat-option value="option">45</mat-option>
+        <mat-option value="option">60</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </form>
+  <button mat-raised-button color="primary" (click)="createService()">
+    Save
+  </button>
+  <button mat-raised-button (click)="cancel()">
+    Cancel
+  </button>
+</mat-card>
