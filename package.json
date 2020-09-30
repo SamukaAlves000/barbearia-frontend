@@ -29,6 +29,7 @@
     "highcharts": "^8.2.0",
     "highcharts-angular": "^2.8.0",
     "jquery": "^3.5.1",
+    "mat-table-exporter": "^9.0.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.13.0",
     "zone.js": "~0.10.2"

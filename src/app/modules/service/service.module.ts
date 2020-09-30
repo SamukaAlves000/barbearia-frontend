@@ -9,6 +9,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {ServiceServiceService} from './service-service.service';
+import {MatTableModule} from '@angular/material/table';
+import {RouterModule} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+import {MatTableExporterModule} from 'mat-table-exporter';
 
 
 @NgModule({
@@ -23,7 +27,13 @@ import {ServiceServiceService} from './service-service.service';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule,
+    RouterModule,
+    HttpClientModule
+  ],
+  exports: [
+    ListServiceComponent
   ],
   providers: [
     ServiceServiceService
