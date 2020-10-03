@@ -1,6 +1,6 @@
-export interface Service {
+export interface Servico {
   id?: number;
-  description: string;
-  price: number;
-  duration: number;
+  descricao: string;
+  preco: number;
+  duracao: number;
 }
