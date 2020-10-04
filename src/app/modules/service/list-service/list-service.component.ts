@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import {Servico} from '../service.model';
 import {ServiceServiceService} from '../service-service.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-list-service',
@@ -11,7 +12,7 @@ import {ServiceServiceService} from '../service-service.service';
 export class ListServiceComponent implements OnInit {
 
   services: Servico[];
-  constructor(private serviceService: ServiceServiceService) { }
+  constructor(private serviceService: ServiceServiceService, private  router: Router) { }
 
   displayedColumns: string[] = ['id', 'description', 'duration', 'price',  'action'];
   dataSource: MatTableDataSource<Servico>;
@@ -43,5 +44,9 @@ export class ListServiceComponent implements OnInit {
         },
         error => console.log(error));
 
+  }
+
+  navigateToDetails(id: number) {
+    this.router.navigate(['service/update/' + id]);
   }
 }

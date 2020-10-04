@@ -13,6 +13,7 @@ import {MatTableModule} from '@angular/material/table';
 import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import {MatTableExporterModule} from 'mat-table-exporter';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -21,17 +22,18 @@ import {MatTableExporterModule} from 'mat-table-exporter';
     DetailsServiceComponent,
     ListServiceComponent,
   ],
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatTableModule,
-    RouterModule,
-    HttpClientModule
-  ],
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatTableModule,
+        RouterModule,
+        HttpClientModule,
+        FormsModule
+    ],
   exports: [
     ListServiceComponent
   ],

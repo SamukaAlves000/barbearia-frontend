@@ -3,12 +3,12 @@
   <form>
 
     <mat-form-field>
-      <input matInput placeholder="Descrição" name="descricao">
+      <input matInput placeholder="Descrição" name="descricao" [(ngModel)]="servico.descricao">
     </mat-form-field>
     <small  class="form-text text-muted">Examples: Simple cut, Degradê cut, Beard ...</small>
 
     <mat-form-field>
-      <input matInput placeholder="Preço (R$)"  name="price" type="number" class="example-right-align">
+      <input matInput placeholder="Preço (R$)"  name="price" type="number" class="example-right-align" [(ngModel)]="servico.preco">
     </mat-form-field>
     <small  class="form-text text-muted">Examples: 10.00, 15.00, 20.00 ...</small>
 
@@ -16,11 +16,8 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Duração/Minutos</mat-label>
-      <mat-select>
-        <mat-option value="option">15</mat-option>
-        <mat-option value="option">30</mat-option>
-        <mat-option value="option">45</mat-option>
-        <mat-option value="option">60</mat-option>
+      <mat-select  [(ngModel)]="servico.duracao" name="duracao">
+        <mat-option *ngFor="let item of duracoes;" [value]="item.duracao">{{item.duracao}}</mat-option>
       </mat-select>
     </mat-form-field>
 
@@ -32,3 +29,4 @@
     Cancel
   </button>
 </mat-card>
+<h1>Duração:{{servico.duracao}}</h1>

@@ -33,7 +33,7 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef style="text-align: center">Actions</th>
       <td mat-cell *matCellDef="let element" style="text-align: center">
-        <button mat-raised-button  color="primary">
+        <button mat-raised-button  (click)="navigateToDetails(element.id)" color="primary">
           Editar
         </button>
         <button mat-raised-button (click)="excluirServico(element.id)" color="warn">

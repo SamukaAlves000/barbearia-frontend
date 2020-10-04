@@ -4,6 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Servico} from './service.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -28,5 +29,18 @@ export class ServiceServiceService {
 
   deleteServico(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`);
+  }
+
+  addServico(servico: Servico): Observable<Servico> {
+    return this.http.post<Servico>(this.baseUrl, servico);
+  }
+
+  readById(id: string) {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Servico>(url);
+  }
+
+  updateServico(servico: Servico): Observable<Servico> {
+    return this.http.put<Servico>(this.baseUrl, servico);
   }
 }

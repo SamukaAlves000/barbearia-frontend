@@ -5,6 +5,7 @@ import {DashboardComponent} from './modules/dashboard/dashboard.component';
 import {PostsComponent} from './modules/posts/posts.component';
 import {ServiceComponent} from './modules/service/service.component';
 import {CreateServiceComponent} from './modules/service/create-service/create-service.component';
+import {DetailsServiceComponent} from './modules/service/details-service/details-service.component';
 
 
 const routes: Routes = [{
@@ -22,6 +23,9 @@ const routes: Routes = [{
     }, {
       path: 'service/create',
       component: CreateServiceComponent
+    }, {
+      path: 'service/update/:idService',
+      component: DetailsServiceComponent
     }]
   }];
 
