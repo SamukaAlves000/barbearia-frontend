@@ -1,0 +1,44 @@
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+button{
+  margin: 20px 15px 0px 0px;
+}
+
+.example-right-align {
+  text-align: left;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.example-container .mat-form-field + .mat-form-field{
+  margin-left: 50px;
+}
+
+.example-container .mat-form-field + .mat-radio-group{
+  margin-left: 50px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+
+
+
+
+
+
+
+
+

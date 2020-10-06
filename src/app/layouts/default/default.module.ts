@@ -9,7 +9,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
-import {DashboardService} from '../../modules/dashboard.service';
+import {DashboardService} from '../../modules/dashboard/dashboard.service';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {ServiceComponent} from '../../modules/service/service.component';
 import {MatButtonModule} from '@angular/material/button';
@@ -17,6 +17,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {ServiceModule} from '../../modules/service/service.module';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {PessoaComponent} from '../../modules/pessoa/pessoa.component';
+import {PessoaModule} from '../../modules/pessoa/pessoa.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     DashboardComponent,
     PostsComponent,
     ServiceComponent,
+    PessoaComponent,
   ],
   imports: [
     CommonModule,
@@ -38,7 +41,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatInputModule,
     MatSelectModule,
     MatSnackBarModule,
-    ServiceModule
+    ServiceModule,
+    PessoaModule
 
 
   ],

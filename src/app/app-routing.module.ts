@@ -6,6 +6,8 @@ import {PostsComponent} from './modules/posts/posts.component';
 import {ServiceComponent} from './modules/service/service.component';
 import {CreateServiceComponent} from './modules/service/create-service/create-service.component';
 import {DetailsServiceComponent} from './modules/service/details-service/details-service.component';
+import {PessoaComponent} from './modules/pessoa/pessoa.component';
+import {CreatePessoaComponent} from './modules/pessoa/create-pessoa/create-pessoa.component';
 
 
 const routes: Routes = [{
@@ -26,6 +28,12 @@ const routes: Routes = [{
     }, {
       path: 'service/update/:idService',
       component: DetailsServiceComponent
+    }, {
+      path: 'pessoa',
+      component: PessoaComponent
+    }, {
+      path: 'pessoa/create',
+      component: CreatePessoaComponent
     }]
   }];
 

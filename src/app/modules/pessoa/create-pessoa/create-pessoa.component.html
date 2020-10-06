@@ -1,0 +1,77 @@
+<mat-card class="mat-elevation-z5">
+    <mat-card-title>New Person</mat-card-title>
+    <form>
+      <mat-card class="mat-elevation-z2">
+        <mat-card-subtitle>Person</mat-card-subtitle>
+          <div class="example-container">
+
+            <mat-form-field style="width: 30%">
+              <input matInput placeholder="Nome completo" name="nome" type="text">
+            </mat-form-field>
+
+            <mat-form-field style="width: 20%;">
+              <input matInput placeholder="Apelido" name="apelido" type="text">
+            </mat-form-field>
+
+            <mat-form-field style="width: 20%;">
+              <input matInput placeholder="CPF" name="cpf" type="text" >
+            </mat-form-field>
+          </div>
+          <div class="example-container">
+            <mat-form-field style="width: 30%;">
+              <input matInput placeholder="Email" name="email" type="email">
+            </mat-form-field>
+          </div>
+          <div class="example-container">
+            <mat-form-field>
+              <input  matInput placeholder="Data de nascimento" name="dataNasc" type="date">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input  matInput placeholder="telefone" name="telefone" type="tel" >
+            </mat-form-field>
+
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="1">Masculino</mat-radio-button>
+              <mat-radio-button value="2">Femenino</mat-radio-button>
+            </mat-radio-group>
+          </div>
+      </mat-card>
+      <br>
+      <mat-card class="mat-elevation-z2">
+        <mat-card-subtitle>Endereço</mat-card-subtitle>
+          <div class="example-container">
+          <mat-form-field style="width: 20%;">
+            <input matInput placeholder="Cidade" name="cidade" type="text">
+          </mat-form-field>
+          <mat-form-field style="width: 20%;">
+            <input matInput placeholder="Bairro" name="bairro" type="text">
+          </mat-form-field>
+          <mat-form-field style="width: 30%;">
+            <input matInput placeholder="Complemento" name="complemento" type="text">
+          </mat-form-field>
+          </div>
+          <mat-form-field style="width: 20%;">
+            <mat-label>UF</mat-label>
+            <mat-select  name="uf">
+              <mat-option *ngFor="let item of ufs;" [value]="item.sigla">{{item.sigla}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+      </mat-card>
+      <br>
+      <mat-card class="mat-elevation-z2">
+        <mat-card-subtitle>A pessoa a ser cadastrada é um Cliente ou Funcionário?</mat-card-subtitle>
+        <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1">Cliente</mat-radio-button>
+          <mat-radio-button value="2">Funcionário</mat-radio-button>
+        </mat-radio-group>
+      </mat-card>
+    </form>
+    <button mat-raised-button color="primary" (click)="createPerson()">
+      Save
+    </button>
+    <button mat-raised-button (click)="cancel()">
+      Cancel
+    </button>
+</mat-card>
+
