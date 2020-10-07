@@ -14,7 +14,7 @@ export class PessoaService {
 
   showMessage(msg: string): void {
     this.snackBar.open(msg, 'X', {
-        duration: 3000,
+        duration: 5000,
         horizontalPosition: 'right',
         verticalPosition: 'bottom',
         panelClass: ['blue-snackbar']

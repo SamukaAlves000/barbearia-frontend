@@ -22,7 +22,6 @@ export class CreateServiceComponent implements OnInit {
     {id: 3, duracao: 45},
     {id: 4, duracao: 60}
   ];
-  selectedValue = null;
 
   constructor(private router: Router, private serviceService: ServiceServiceService) { }
 

@@ -42,7 +42,7 @@ export class ListPessoaComponent implements OnInit {
       .subscribe(
         data => {
           this.readPessoas();
-          this.pessoaService.showMessage('Serviço excluído com sucesso!');
+          this.pessoaService.showMessage('Pessoa excluída com sucesso!');
         },
         error => console.log(error));
 

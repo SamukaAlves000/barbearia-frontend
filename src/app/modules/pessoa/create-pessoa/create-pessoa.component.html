@@ -1,12 +1,12 @@
 <mat-card class="mat-elevation-z5">
-    <mat-card-title>New Person</mat-card-title>
+    <mat-card-title>Nova Pessoa</mat-card-title>
     <form>
       <mat-card class="mat-elevation-z2">
-        <mat-card-subtitle>Person</mat-card-subtitle>
+        <mat-card-subtitle>Pessoa</mat-card-subtitle>
           <div class="example-container">
 
             <mat-form-field style="width: 30%">
-              <input matInput placeholder="Nome completo" name="nome" type="text">
+              <input matInput placeholder="Nome completo" name="nome" type="text" [(ngModel)]="pessoa.nome">
             </mat-form-field>
 
             <mat-form-field style="width: 20%;">
@@ -14,26 +14,26 @@
             </mat-form-field>
 
             <mat-form-field style="width: 20%;">
-              <input matInput placeholder="CPF" name="cpf" type="text" >
+              <input matInput placeholder="CPF" name="cpf" type="text" [(ngModel)]="pessoa.cpf">
             </mat-form-field>
           </div>
           <div class="example-container">
             <mat-form-field style="width: 30%;">
-              <input matInput placeholder="Email" name="email" type="email">
+              <input matInput placeholder="Email" name="email" type="email" [(ngModel)]="pessoa.email">
             </mat-form-field>
           </div>
           <div class="example-container">
             <mat-form-field>
-              <input  matInput placeholder="Data de nascimento" name="dataNasc" type="date">
+              <input  matInput placeholder="Data de nascimento" name="dataNasc" type="date" [(ngModel)]="pessoa.dataNascimento">
             </mat-form-field>
 
             <mat-form-field>
-              <input  matInput placeholder="telefone" name="telefone" type="tel" >
+              <input  matInput placeholder="telefone" name="telefone" type="tel" [(ngModel)]="pessoa.telefone">
             </mat-form-field>
 
-            <mat-radio-group aria-label="Select an option">
-              <mat-radio-button value="1">Masculino</mat-radio-button>
-              <mat-radio-button value="2">Femenino</mat-radio-button>
+            <mat-radio-group aria-label="Select an option" [(ngModel)]="pessoa.sexo" name="sexo">
+              <mat-radio-button value="M">Masculino</mat-radio-button>
+              <mat-radio-button value="F">Femenino</mat-radio-button>
             </mat-radio-group>
           </div>
       </mat-card>
@@ -42,18 +42,18 @@
         <mat-card-subtitle>Endereço</mat-card-subtitle>
           <div class="example-container">
           <mat-form-field style="width: 20%;">
-            <input matInput placeholder="Cidade" name="cidade" type="text">
+            <input matInput placeholder="Cidade" name="cidade" type="text" [(ngModel)]="pessoa.cidade">
           </mat-form-field>
           <mat-form-field style="width: 20%;">
-            <input matInput placeholder="Bairro" name="bairro" type="text">
+            <input matInput placeholder="Bairro" name="bairro" type="text" [(ngModel)]="pessoa.bairro">
           </mat-form-field>
           <mat-form-field style="width: 30%;">
-            <input matInput placeholder="Complemento" name="complemento" type="text">
+            <input matInput placeholder="Complemento" name="complemento" type="text" [(ngModel)]="pessoa.complemento">
           </mat-form-field>
           </div>
           <mat-form-field style="width: 20%;">
             <mat-label>UF</mat-label>
-            <mat-select  name="uf">
+            <mat-select  name="uf" [(ngModel)]="pessoa.uf">
               <mat-option *ngFor="let item of ufs;" [value]="item.sigla">{{item.sigla}}</mat-option>
             </mat-select>
           </mat-form-field>
