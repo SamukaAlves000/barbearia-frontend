@@ -1,3 +1,5 @@
+import {Funcionario} from '../Funcionario/funcionario.model';
+
 export interface Pessoa {
   id?: number;
   nome: string;
@@ -10,6 +12,7 @@ export interface Pessoa {
   cpf: string;
   sexo: string;
   dataNascimento: string;
-  caminhoFoto : string;
+  caminhoFoto: string;
+  funcionario: Funcionario;
 
 }

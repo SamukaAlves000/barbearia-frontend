@@ -21,7 +21,10 @@ export class CreatePessoaComponent implements OnInit {
     cpf: null,
     caminhoFoto: null,
     sexo: null,
-    uf: null
+    uf: null,
+    funcionario: {
+      salario: 0
+    }
   };
 
   ufs = [
@@ -30,6 +33,8 @@ export class CreatePessoaComponent implements OnInit {
     {id: 3, sigla: 'MT'},
     {id: 4, sigla: 'MTS'}
   ];
+
+  mostrarInputSalario = false;
 
   constructor(private router: Router, private pessoaService: PessoaService) {
   }
@@ -46,5 +51,9 @@ export class CreatePessoaComponent implements OnInit {
       this.pessoaService.showMessage('Pessoa criada com sucesso!');
       this.cancel();
     });
+  }
+
+  isMostrarInputSalario(isMostrar): void {
+    this.mostrarInputSalario = isMostrar;
   }
 }

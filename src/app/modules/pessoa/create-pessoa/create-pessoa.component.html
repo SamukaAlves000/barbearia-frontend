@@ -62,10 +62,21 @@
       <mat-card class="mat-elevation-z2">
         <mat-card-subtitle>A pessoa a ser cadastrada é um Cliente ou Funcionário?</mat-card-subtitle>
         <mat-radio-group aria-label="Select an option">
-          <mat-radio-button value="1">Cliente</mat-radio-button>
-          <mat-radio-button value="2">Funcionário</mat-radio-button>
+          <mat-radio-button value="1" checked (click)="isMostrarInputSalario(false)">Cliente</mat-radio-button>
+          <mat-radio-button value="2" (click)="isMostrarInputSalario(true)">Funcionário</mat-radio-button>
         </mat-radio-group>
+
       </mat-card>
+
+      <br>
+
+      <mat-card class="mat-elevation-z2" *ngIf="mostrarInputSalario">
+        <mat-card-subtitle>Informe o salário do Funcionário?</mat-card-subtitle>
+        <mat-form-field style="width: 20%">
+          <input matInput placeholder="Salário" name="salario" type="text" [(ngModel)]="pessoa.funcionario.salario">
+        </mat-form-field>
+      </mat-card>
+
     </form>
     <button mat-raised-button color="primary" (click)="createPerson()">
       Save
@@ -74,4 +85,5 @@
       Cancel
     </button>
 </mat-card>
+<br>
 

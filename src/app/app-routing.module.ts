@@ -8,6 +8,7 @@ import {CreateServiceComponent} from './modules/service/create-service/create-se
 import {DetailsServiceComponent} from './modules/service/details-service/details-service.component';
 import {PessoaComponent} from './modules/pessoa/pessoa.component';
 import {CreatePessoaComponent} from './modules/pessoa/create-pessoa/create-pessoa.component';
+import {DetailsPessoaComponent} from './modules/pessoa/details-pessoa/details-pessoa.component';
 
 
 const routes: Routes = [{
@@ -34,6 +35,9 @@ const routes: Routes = [{
     }, {
       path: 'pessoa/create',
       component: CreatePessoaComponent
+    }, {
+      path: 'pessoa/update/:idPessoa',
+      component: DetailsPessoaComponent
     }]
   }];
 
